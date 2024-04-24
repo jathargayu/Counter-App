@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Counter_App</title>
+</head>
+<body>
+    <div>
+    <h1 class="h1">Counter App</h1>
+    <h1 id="valueElement">0</h1>
+    <button id="increment">Increment</button>
+    <button id="reset">Reset</button>
+    <button id="decrement">Decrement</button>
+</div>
+    <script>
+        const incrementEle = document.getElementById("increment");
+        const decrementEle = document.getElementById("decrement");
+        const valueEle = document.getElementById("valueElement");
+        const resetEle = document.getElementById("reset");
+
+        incrementEle.addEventListener('click', ()=>{
+            let value = parseInt(valueEle.textContent);
+            value = value +1;
+            valueEle.textContent = value;
+        });
+
+      decrementEle.addEventListener('click', ()=>{
+            let value = parseInt(valueEle.textContent);
+            value = value - 1;
+            valueEle.textContent = value;
+        });
+        
+        resetEle.addEventListener('click', ()=>{
+            let value = parseInt(valueEle.textContent);
+            value = 0;
+            valueEle.textContent = value;
+        });
+    </script>
+</body>
+</html>
